@@ -6,14 +6,10 @@ const app = express()
 const port = process.env.PORT
 const User_Router = require('./Modules/User_module/User_Routes')
 // ======================== cors ========================
-app.use(
-  cors({
-    origin: '*'
-})
-)
+app.use(cors())
 app.use(express.json())
-app.get("/", (req, res) => res.send('Welcome to my APP!'))
-app.use("/pictures" , express.static("./pictures"))
+app.get('/', (req, res) => res.send('Welcome to my APP!'))
+app.use('/pictures', express.static('./pictures'))
 
 connection_to_DB()
 app.use(User_Router)
