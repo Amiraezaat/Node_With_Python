@@ -11,8 +11,8 @@ app.use(
     origin: '*'
 })
 )
-app.get("/", (req, res) => res.send('Hello World!'))
 app.use(express.json())
+app.get("/", (req, res) => res.send('Welcome to my APP!'))
 app.use("/pictures" , express.static("./pictures"))
 
 connection_to_DB()
