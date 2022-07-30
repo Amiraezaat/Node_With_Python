@@ -1,11 +1,9 @@
 const mongoose = require('mongoose')
-const CryptoJS = require('crypto-js')
 
 const Citizen_Schema = new mongoose.Schema(
     {
         firstName: { type: String, required: true },
         lastName: { type: String, required: true },
-        // email: { type: String, required: true, unique: true },
         age: { type: Number, required: true },
         phone: { type: Number, required: true },
         Current_Address: { type: String, required: true },
@@ -14,8 +12,7 @@ const Citizen_Schema = new mongoose.Schema(
         country: { type: String, required: true },
         National_ID: {
           type: String,
-          required: true,
-          unique: true
+          required: true
         },
         Social_Status: {
           type: String,
