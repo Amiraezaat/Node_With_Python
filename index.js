@@ -11,7 +11,7 @@ app.use(
     origin: '*'
 })
 )
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get("/", (req, res) => res.send('Hello World!'))
 app.use(express.json())
 app.use("/pictures" , express.static("./pictures"))
 
